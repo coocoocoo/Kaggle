@@ -6,7 +6,19 @@ Created on Wed Oct  4 15:47:51 2017
 @author: shawn
 """
 import os
+import pandas as pd
+import numpy as np
 
 competition = 'House Prices _ Advanced Regression Techniques'
 path = '/Users/shawn/Desktop/' + competition + '/'
 os.chdir(path)
+
+train = pd.read_csv(path + '/input/train.csv')
+test = pd.read_csv(path + '/input/test.csv')
+
+train.head()
+
+train.columns
+
+name = ['Id','MSSubClass']
+train[name]
